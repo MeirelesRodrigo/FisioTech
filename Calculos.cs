@@ -32,27 +32,27 @@ public class CalculosParametros(){
         Console.WriteLine("HCO3..: "+hco3);
         Console.WriteLine("*************************");
 
-        if (ph < 7.35 && paco2 > 45 && hco3 > 26) ;
+        if (ph < 7.35 && paco2 > 45 && hco3 > 26) 
         {
-            Console.WriteLine("RESULTADO: DISTUBIO RESPIRATÓRIO ACIDÓTICO COM COMPENSAÇÃO METABÓLICA");
+            Console.WriteLine("RESULTADO: DISTÚRBIO RESPIRATÓRIO ACIDÓTICO COM COMPENSAÇÃO METABÓLICA");
         }
-        else if (ph < 7.35 && paco2 > 45 && hco3 < 22) ;
+        else if (ph < 7.35 && paco2 > 45 && hco3 < 22) 
         {
             Console.WriteLine("RESULTADO: DISTÚRBIO RESPIRATÓRIO ACIDÓTICO COM ACIDOSE METABÓLICA CONCOMITANTE");
         }
-        else if (ph < 7.35 && paco2 < 35 && hco3 < 22) ;
+        else if (ph < 7.35 && paco2 < 35 && hco3 < 22)
         {
             Console.WriteLine("RESULTADO: DISTÚBIO MISTO ACIDÓTICO");
         }
-        else if (ph > 7.45 && paco2 < 35 && hco3 < 22) ;
+        else if (ph > 7.45 && paco2 < 35 && hco3 < 22)
         {
             Console.WriteLine("RESULTADO: DISTÚBIO RESPIRATÓRIO ALCALÓTICO COM ACIDOSE METABÓLICA CONCOMITANTE");
         }
-        else if (ph > 7.45 && paco2 < 35 && hco3 > 26) ;
+        else if (ph > 7.45 && paco2 < 35 && hco3 > 26)
         {
             Console.WriteLine("RESULTADO: DISTÚRBIO RESPIRATÓRIO COM COMPENSAÇÃO METABÓLICA");
         }
-        else if (ph > 7.45 && paco2 > 45 && hco3 > 26) ;
+        else if (ph > 7.45 && paco2 > 45 && hco3 > 26)
         {
             Console.WriteLine("RESULTADO: DISTÚRBIO MISTO ALCALÓTICO");
         }

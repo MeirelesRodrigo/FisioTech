@@ -24,7 +24,7 @@ class Program{
         Console.WriteLine("| 2 -  GASOMETRIA ARTERIAL   |");
         Console.WriteLine("| 3 -     PI / PE MAX        |");
         Console.WriteLine("| 4 -   ESCALA DE GLASGOW    |");
-        Console.WriteLine("| 5 -         SS          |");
+        Console.WriteLine("| 5 -         SAIR           |");
         Console.WriteLine("|----------------------------|");
 
         OpcoesMenu();
