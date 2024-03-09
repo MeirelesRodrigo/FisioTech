@@ -2,7 +2,7 @@
 # FisioTech
 
 O app Fisiotech é uma ferramenta que promete facilitar a vida do profissional de fisioterapia, realizando de maneira rápida e eficiente cálculos que vão ajudar nas práticas de atenção ao paciente.
-
+<img src="LogoFisioTech.png">
 ## Funcionalidades
 
 - Cálculo de peso predito e volume
