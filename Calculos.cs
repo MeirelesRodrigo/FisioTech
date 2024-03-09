@@ -1,3 +1,5 @@
+using System.Runtime.Remoting;
+
 namespace Calculos;
 
 
@@ -29,22 +31,36 @@ public class CalculosParametros(){
         Console.WriteLine("PACO2.: "+paco2);
         Console.WriteLine("HCO3..: "+hco3);
         Console.WriteLine("*************************");
-       
-        if(ph <7.35 && hco3 <22){
-            Console.WriteLine("RESULTADO: ACIDOSE METABÓLICA ");
+
+        if (ph < 7.35 && paco2 > 45 && hco3 > 26) ;
+        {
+            Console.WriteLine("RESULTADO: DISTUBIO RESPIRATÓRIO ACIDÓTICO COM COMPENSAÇÃO METABÓLICA");
         }
-        else if(ph <7.45 && paco2 >45){
-            Console.WriteLine("RESULTADO: ACIDOSE RESPIRATÓRIA");
+        else if (ph < 7.35 && paco2 > 45 && hco3 < 22) ;
+        {
+            Console.WriteLine("RESULTADO: DISTÚRBIO RESPIRATÓRIO ACIDÓTICO COM ACIDOSE METABÓLICA CONCOMITANTE");
         }
-        else if(ph > 7.45 && hco3 >26){
-            Console.WriteLine("RESULTADO: ALCALOSE METABÓLICA");
+        else if (ph < 7.35 && paco2 < 35 && hco3 < 22) ;
+        {
+            Console.WriteLine("RESULTADO: DISTÚBIO MISTO ACIDÓTICO");
         }
-        else if(ph > 7.45 && paco2 <35){
-            Console.WriteLine("RESULTADO: ALCALOSE RESPIRATÓRIA");
+        else if (ph > 7.45 && paco2 < 35 && hco3 < 22) ;
+        {
+            Console.WriteLine("RESULTADO: DISTÚBIO RESPIRATÓRIO ALCALÓTICO COM ACIDOSE METABÓLICA CONCOMITANTE");
         }
-        else{
-            Console.WriteLine("GASOMETRIA DENTRO DO NORMAL");
+        else if (ph > 7.45 && paco2 < 35 && hco3 > 26) ;
+        {
+            Console.WriteLine("RESULTADO: DISTÚRBIO RESPIRATÓRIO COM COMPENSAÇÃO METABÓLICA");
         }
+        else if (ph > 7.45 && paco2 > 45 && hco3 > 26) ;
+        {
+            Console.WriteLine("RESULTADO: DISTÚRBIO MISTO ALCALÓTICO");
+        }
+        else
+        {
+            Console.WriteLine("GASOMETRIA DENTRO DA NORMALIDADE");
+        }
+
         Console.WriteLine("PRESSIONE [ENTER] PARA PROSEGUIR");
         Console.ReadKey();
     }
