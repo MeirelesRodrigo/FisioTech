@@ -49,7 +49,7 @@ class Program{
                 break;
             }
             case 3: {
-                Console.WriteLine("OPÇÃO 03");
+                _calculos.PiPeMax();
                 Console.ReadKey();
                 Menu();
                 break;

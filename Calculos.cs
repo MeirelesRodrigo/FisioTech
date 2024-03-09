@@ -21,7 +21,7 @@ public class CalculosParametros(){
         var hco3 = double.Parse(Console.ReadLine());
         Console.Write(Environment.NewLine);
 
-        Console.WriteLine("DADOS CADASTRADOS, PRESSIONE [ENTER] PARA PROSEGUIR");
+        Console.WriteLine("DADOS CADASTRADOS, PRESSIONE [ENTER] PARA PROSSEGUIR");
         Console.ReadKey();
 
         Console.Clear();
@@ -61,10 +61,9 @@ public class CalculosParametros(){
             Console.WriteLine("GASOMETRIA DENTRO DA NORMALIDADE");
         }
 
-        Console.WriteLine("PRESSIONE [ENTER] PARA PROSEGUIR");
+        Console.WriteLine("PRESSIONE [ENTER] PARA PROSSEGUIR");
         Console.ReadKey();
     }
-
 
     public void PesoPredito(){
         Console.Clear();
@@ -90,12 +89,12 @@ public class CalculosParametros(){
                 var pesopredito = 50 + 0.91 * (altura - 152.4);
                 
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("PESO IDEAL...: "+pesopredito+" KG");
-                Console.WriteLine("VENTILANDO COM 4ML/KG...:"+pesopredito*4+" ML");
-                Console.WriteLine("VENTILANDO COM 6ML/KG...:"+pesopredito*6+" ML");
-                Console.WriteLine("VENTILANDO COM 8ML/KG...:"+pesopredito*8+" ML");
+                Console.WriteLine("PESO IDEAL...: "+pesopredito.ToString("00.00")+" KG");
+                Console.WriteLine("VENTILANDO COM 4ML/KG...:"+(pesopredito*4).ToString("000.00")+" ML");
+                Console.WriteLine("VENTILANDO COM 6ML/KG...:"+(pesopredito*6).ToString("000.00")+" ML");
+                Console.WriteLine("VENTILANDO COM 8ML/KG...:"+(pesopredito*8).ToString("000.00")+" ML");
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("PRESSIONE [ENTER] PARA PROSEGUIR");
+                Console.WriteLine("PRESSIONE [ENTER] PARA PROSSEGUIR");
                 break;
             }
             case 2:{
@@ -106,13 +105,14 @@ public class CalculosParametros(){
                 var altura = double.Parse(Console.ReadLine());
                 var pesopredito = 45.5 + 0.91 * (altura - 152.4);
                 
+                
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("PESO IDEAL...: "+pesopredito+" KG");
-                Console.WriteLine("VENTILANDO COM 4ML/KG...:"+pesopredito*4+" ML");
-                Console.WriteLine("VENTILANDO COM 6ML/KG...:"+pesopredito*6+" ML");
-                Console.WriteLine("VENTILANDO COM 8ML/KG...:"+pesopredito*8+" ML");
+                Console.WriteLine("PESO IDEAL...: "+pesopredito.ToString("000.00")+" KG");
+                Console.WriteLine("VENTILANDO COM 4ML/KG...:"+(pesopredito*4).ToString("000.00") + " ML");
+                Console.WriteLine("VENTILANDO COM 6ML/KG...:"+(pesopredito*6).ToString("000.00") + " ML");
+                Console.WriteLine("VENTILANDO COM 8ML/KG...:"+(pesopredito*8).ToString("000.00") + " ML");
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("PRESSIONE [ENTER] PARA PROSEGUIR");
+                Console.WriteLine("PRESSIONE [ENTER] PARA PROSSEGUIR");
                 break;
             }
             default:{
@@ -124,4 +124,66 @@ public class CalculosParametros(){
         }
     }
 
+    public void PiPeMax()
+    {
+        Console.Clear();
+
+        Console.WriteLine("---------------------------------");
+        Console.WriteLine("| SELECIONE O SEXO DO PACIENTE | ");
+        Console.WriteLine("| 1 -         MASCULINO        |");
+        Console.WriteLine("| 2 -         FEMININO         |");
+        Console.WriteLine("---------------------------------");
+        MenuPiPexMax();
+    }
+
+    public void MenuPiPexMax()
+    {
+        Console.WriteLine("ESCOLHA UMA OPÇÃO");
+        var opcao = int.Parse(Console.ReadLine());
+
+        switch (opcao){
+            case 1:
+                {
+                    Console.Clear();
+                    Console.WriteLine("INFORME A IDADE DO PACIENTE");
+                    
+                    var idade = int.Parse(Console.ReadLine());
+                    var pimax = -1.14 * (idade) + 149.33;
+                    var pemax = -1.26 * (idade) + 183.31;
+
+                    Console.WriteLine("|-----------------------------");
+                    Console.WriteLine("|            RESULTADO        ");
+                    Console.WriteLine("  PI-MAX......:" + pimax.ToString("000.00") + " mmH2O ");
+                    Console.WriteLine("  PE-MAX......:" + pemax.ToString("000.00") + " mmH2O ");
+                    Console.WriteLine("-----------------------------");
+
+                    break;
+                }
+            case 2:
+                {
+                    Console.Clear();
+                    Console.WriteLine("INFORME A IDADE DO PACIENTE");
+
+                    var idade = int.Parse(Console.ReadLine());
+                    var pimax = -0.46 * (idade) + 74.25;
+                    var pemax = -0.68 * (idade) + 119.35;
+
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("           RESULTADO         ");
+                    Console.WriteLine("  PI-MAX......:" + pimax.ToString("000.00") + " mmH2O ");
+                    Console.WriteLine("  PE-MAX......:" + pemax.ToString("000.00") + " mmH2O ");
+                    Console.WriteLine("-----------------------------");
+                    break;
+                }
+            default:
+                {
+                    Console.Clear();    
+                    Console.WriteLine("OPÇÃO INCORRETA");
+                    Console.ReadKey();
+                    PiPeMax();
+                    break;
+                }
+
+        }
+    }
 }
