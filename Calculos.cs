@@ -5,6 +5,69 @@ namespace Calculos;
 
 public class CalculosParametros(){
 
+    
+    
+    
+    
+    public void EscalaGlasgow()
+    {
+        Console.Clear();
+        Console.WriteLine("                     ABERTURA OCULAR                      ");
+        Console.WriteLine("1 - OLHOS ABERTOS PREVIAMENTE À ESTIMULAÇÃO.......: 04 PTS");
+        Console.WriteLine("2 - ABERTURA OCULAR APÓS ORDEM VERBAL.............: 03 PTS");
+        Console.WriteLine("3 - À RESPOSTA DOLOROSA...........................: 02 PTS");
+        Console.WriteLine("4 - NENHUMA RESPOSTA..............................: 01 PTS");
+        
+        Console.WriteLine("INFORME A PONTUAÇÃO");
+        var ocular = int.Parse(Console.ReadLine());
+        
+        Console.Clear();
+        Console.WriteLine("                    RESPOSTA VERBAL                       ");
+        Console.WriteLine("1 - RESPOSTA VERBAL ADEQUADA, ORIENTADA...........: 05 PTS");
+        Console.WriteLine("2 - RESPOSTA VERBAL NÃO ORIENTADA, + COERENTE.....: 04 PTS");
+        Console.WriteLine("3 - PALAVRAS INAPROPRIADAS........................: 03 PTS");
+        Console.WriteLine("4 - SONS INTELEGÍVEIS ............................: 02 PTS");
+        Console.WriteLine("5 - NENHUMA RESPOSTA..............................: 01 PTS");
+        var verbal = int.Parse(Console.ReadLine());
+
+        Console.Clear();
+        Console.WriteLine("                    RESPOSTA MOTORA                       ");
+        Console.WriteLine("1 - OBEDECE A COMANDOS............................: 06 PTS");
+        Console.WriteLine("2 - RESPONDE AO LOCAL DA DOR......................: 05 PTS");
+        Console.WriteLine("3 - RETIRADA À DOR................................: 04 PTS");
+        Console.WriteLine("3 - FLEXÃO ANORMAL AOS ESTÍMULOS DOLOROSOS........: 03 PTS");
+        Console.WriteLine("4 - EXTENSÃO ANORMAL A ESTÍMULOS DOLOROSOS........: 02 PTS");
+        Console.WriteLine("5 - NENHUMA RESPOSTA..............................: 01 PTS");
+        var motora = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("       RESULTADO                       ");
+
+
+
+        int pontuacao = (ocular + verbal + motora);
+
+        if (pontuacao >= 13 && pontuacao <= 15)
+        {
+            Console.WriteLine("A PONTUAÇÃO DE FOI : " + pontuacao + " PTS");
+            Console.WriteLine("CLASSIFICAÇÃO > LEVE");
+        }
+        else if(pontuacao >= 9 && pontuacao <= 12)
+        {
+            Console.WriteLine("A PONTUAÇÃO DE FOI : " + pontuacao + " PTS");
+            Console.WriteLine("CLASSIFICAÇÃO > MODERADA");
+        }
+        else if (pontuacao >= 3 && pontuacao <= 8)
+        {
+            Console.WriteLine("A PONTUAÇÃO DE FOI : " + pontuacao + " PTS");
+            Console.WriteLine("CLASSIFICAÇÃO > GRAVE");
+        }
+        else if(pontuacao < 3)
+        {
+            Console.WriteLine("A PONTUAÇÃO DE FOI : " + pontuacao+" PTS");
+            Console.WriteLine("CLASSIFICAÇÃO > COMA");
+        }
+    }
+
     public void GasometriaArterial(){
         Console.Clear();
         Console.WriteLine("| GASOMETRIA ARTERIAL |");
@@ -186,4 +249,4 @@ public class CalculosParametros(){
 
         }
     }
-}
+} 

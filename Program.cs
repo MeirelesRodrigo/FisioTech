@@ -55,7 +55,7 @@ class Program{
                 break;
             }
             case 4: {
-                Console.WriteLine("OPÇÃO 4");
+                _calculos.EscalaGlasgow();
                 Console.ReadKey();
                 Menu();
                 break;
